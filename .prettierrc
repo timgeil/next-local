@@ -1,0 +1,26 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "plugins": [
+    "prettier-plugin-css-order",
+    "prettier-plugin-tailwindcss"  // MUST come last
+  ],
+
+  // The tailwindStylesheet option is used to specify the path to your compiled Tailwind CSS file. This is where the plugin will look for the generated CSS classes to sort them correctly.
+  "tailwindStylesheet": "./css/input.css",
+
+  // The tailwindConfig option is used to specify the path to your Tailwind CSS configuration file. This is necessary for the plugin to understand your custom theme, variants, and other configurations.
+  "tailwindConfig": "./js/tailwind.config.js",
+
+  // The tailwindAttributes option is used to specify additional attributes that should be sorted by the Prettier Tailwind plugin.By default this plugin sorts classes in the class attribute, any framework-specific equivalents like className, :class, [ngClass], and any Tailwind @apply directives. You can sort additional attributes using the tailwindAttributes option, which takes an array of attribute names.
+  "tailwindAttributes": ["className", ":class", "ngClass"],
+
+  // The tailwindFunctions option is used to specify the names of functions that should be treated as Tailwind CSS class generators. This is useful if you are using utility-first CSS libraries like clsx, tw, or cva to generate your Tailwind classes dynamically.
+  "tailwindFunctions": ["clsx", "tw", "cva"],
+
+  // The tailwindPreserveWhitespace option is used to control whether whitespace in Tailwind CSS classes should be preserved. When set to true, it will keep the whitespace between classes as it is, which can be useful for readability in some cases.
+  "tailwindPreserveWhitespace": true,
+
+  // The tailwindPreserveDuplicates option is used to control whether duplicate Tailwind CSS classes should be preserved. When set to true, it will keep duplicate classes in the output, which can be useful if you want to maintain specific class order or if you have utility classes that are intentionally duplicated.
+  "tailwindPreserveDuplicates": true
+}
