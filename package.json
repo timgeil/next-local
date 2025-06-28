@@ -1,0 +1,16 @@
+{
+  "name": "next-local",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  }
+}
